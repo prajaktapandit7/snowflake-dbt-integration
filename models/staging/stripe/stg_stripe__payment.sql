@@ -13,7 +13,8 @@ renamed as (
         orderid,
         paymentmethod,
         status,
-        amount,
+        -- converting amount from dollars to cents
+        amount/100 as amount,
         created,
         _batched_at
 
