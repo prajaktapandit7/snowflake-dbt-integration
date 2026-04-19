@@ -5,7 +5,7 @@ models:
     associated order.
   columns:
   - name: id
-    description: A unique identifier for each payment transaction.
+    description: A unique identifier for each payment transaction
   - name: order_id
     description: The identifier for the order associated with the payment.
   - name: paymentmethod
