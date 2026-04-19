@@ -5,7 +5,13 @@ models:
         data_tests:
           - unique
           - not_null
-          
+      - name: first_name
+        data_tests:
+          - not_null
+      - name: last_name
+        data_tests:
+          - not_null
+
   - name: stg_jaffle_shop__orders
     columns:
       - name: order_id
@@ -24,7 +30,6 @@ models:
                   - return_pending
       - name: customer_id
         data_tests:
-        #basically we check if each customer id in orders model has corresponding id in customers model
           - relationships:
               arguments:
                 to: ref('stg_jaffle_shop__customers')
